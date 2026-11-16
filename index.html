@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MindSpace - Mental Wellness Tracker & Journal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🌷  MindSpace  🍃</h1>
+        <p>Mental Wellness Tracker & Journal</p>
+    </header>
+<div class="menu-container">
+    <button id="menuButton" onclick="toggleMenu()">☰</button>
+
+    <div id="menuOptions" class="menu-options">
+        <a href="#home" onclick="toggleMenu()">Home</a>
+        <a href="#mood" onclick="toggleMenu()">My Mood</a>
+        <a href="#journal" onclick="toggleMenu()">My Journal</a>
+        <a href="#selfcare" onclick="toggleMenu()">Self-Care</a>
+    </div>
+</div>
+    <main>
+
+        <section class="welcome-section" id="home">
+    <div class="welcome-icon">🌷</div>
+
+    <h2>Welcome to Your Little Space</h2>
+
+    <p class="welcome-text">
+        A peaceful place to track your moods,
+        express your thoughts and understand yourself better.
+    </p>
+
+    <p class="welcome-tagline">
+        Track your mood. Express your thoughts.
+        Reflect on yourself.
+    </p>
+</section>
+
+        <section class="mood-section" id="mood">
+            <h2>How are you feeling today?</h2>
+            <p>Select your mood:</p>
+
+            <div class="mood-options">
+                <button onclick="selectMood('Happy')">😊 Happy</button>
+                <button onclick="selectMood('Calm')">😌 Calm</button>
+                <button onclick="selectMood('Okay')">🙂 Okay</button>
+                <button onclick="selectMood('Stressed')">😟 Stressed</button>
+                <button onclick="selectMood('Sad')">😔 Sad</button>
+            </div>
+
+            <p id="selectedMood">Your mood will appear here.</p>
+        </section>
+
+        <section class="journal-section" id="journal">
+            <h2>My Personal Journal</h2>
+            <p>Write down your thoughts and feelings.</p>
+
+            <textarea id="journalEntry"
+                placeholder="Write your thoughts here..."></textarea>
+
+            <button onclick="saveEntry()">Save Entry</button>
+
+            <div id="journalEntries"></div>
+        </section>
+
+        <section class="history-section">
+            <h2>Mood History</h2>
+            <p>Your saved mood records will appear here.</p>
+
+            <div id="moodHistory"></div>
+        </section>
+<!-- Weekly Mood Summary -->
+<section class="weekly-summary">
+
+    <h2>My Weekly Mood Summary</h2>
+
+    <p>Take a look at your mood patterns over the last 7 days.</p>
+
+    <div class="summary-card">
+        <h3 id="weeklyTotal">0</h3>
+        <p>Total Mood Records</p>
+    </div>
+
+    <h3>Mood Distribution</h3>
+
+    <div id="weeklyMoodChart">
+        Your weekly mood summary will appear here.
+    </div>
+
+</section>        
+<!-- Daily Reflection Section -->
+<section class="reflection-section" id="selfcare">
+
+    <h2>Daily Reflection 🌷</h2>
+
+    <p>Take a moment to understand your thoughts and feelings.</p>
+
+    <div id="reflectionQuestion">
+        What made you smile today?
+    </div>
+
+    <button onclick="newReflectionQuestion()">
+        New Reflection Question
+    </button>
+
+</section>s
+        <section class="privacy-section">
+    <h2>Privacy & Data Control</h2>
+
+    <p>
+        Your journal entries and mood records are stored
+        in this browser. You can clear your saved data
+        whenever you want.
+    </p>
+
+    <button onclick="clearAllData()">
+        Clear My Data
+    </button>
+
+    <p>
+        MindSpace is a personal self-reflection tool.
+        It does not provide medical diagnosis or treatment.
+    </p>
+</section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
